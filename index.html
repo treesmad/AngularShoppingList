@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="stylish.css">
+  </head>
+  <body ng-app="aModule" ng-controller="aController">
+    <div class = "potato">
+      <h2>The Best Shopping List Ever</h2>
+      <input type="text" placeholder="Enter Item" ng-model="groceryItem"/>
+      <input type="number" placeholder="Enter Price" ng-model="groceryPrice"/>
+      <button ng-click="addNew()">Add!</button>
+      <ul>
+      <li ng-repeat="thing in groceries | filter:searchForThings">
+        {{thing.item}} : {{thing.price | currency}}
+        <button ng-click="removeThis($one)">Remove</button>
+      </li><br>
+      <li>Total: {{total | currency}}</li>
+      <input type="text" placeholder="Filter" ng-model="searchForThings"/>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+  <script src="script.js"></script>
+</html>

@@ -1,0 +1,17 @@
+h2{
+  text-align: center;
+}
+.potato{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  background-color: rgba(236, 227, 227, 0.7);
+  width: 70%;
+  height: 90%;
+  border: solid 5px black;
+  margin: 150px auto;
+
+}
+body{
+  background-image: url(images/stuff.jpg);
+}
